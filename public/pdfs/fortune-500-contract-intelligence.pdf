@@ -1,0 +1,4 @@
+This is a placeholder for the Fortune 500 Contract Intelligence Transformation PDF.
+In a real implementation, you would place the actual PDF file here.
+
+The file structure is now set up to store PDFs in the public/pdfs/ directory.
