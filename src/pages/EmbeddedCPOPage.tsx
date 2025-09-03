@@ -417,7 +417,6 @@ const EmbeddedCPOPage = () => {
                             </div>
                           </div>
                         </div>
-                        </p>
                       </div>
                     ))}
                   </div>
