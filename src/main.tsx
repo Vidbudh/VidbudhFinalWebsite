@@ -10,6 +10,7 @@ import GenAIAuditPage from './pages/GenAIAuditPage.tsx';
 import AIWorkshopsPage from './pages/AIWorkshopsPage.tsx';
 import GenAIServicesPage from './pages/GenAIServicesPage.tsx';
 import CPOServicesPage from './pages/CPOServicesPage.tsx';
+import EmbeddedCPOPage from './pages/EmbeddedCPOPage.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/ai-workshops" element={<AIWorkshopsPage />} />
         <Route path="/gen-ai-services" element={<GenAIServicesPage />} />
         <Route path="/cpo-services" element={<CPOServicesPage />} />
+        <Route path="/embedded-cpo" element={<EmbeddedCPOPage />} />
       </Routes>
     </Router>
   </StrictMode>
