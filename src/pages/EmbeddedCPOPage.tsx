@@ -144,40 +144,22 @@ const EmbeddedCPOPage = () => {
       description: "Engage me when stability is secured and the focus shifts to growth.",
       scenarios: [
         {
-          title: "Freeing Up Founder/CEO Bandwidth",
-          situation: "Founders often shoulder product leadership longer than they should.",
-          action: "I take ownership so they can focus on fundraising, partnerships, or market expansion, while knowing AI adoption and monetisation are handled with discipline.",
+          title: "Freeing Up Leadership Bandwidth",
+          situation: "Founders and CEOs often carry product leadership longer than they should, leaving them stretched between vision, fundraising, and execution.",
+          action: "I take full ownership of product leadership, freeing them to focus on expansion, partnerships, or investment — while ensuring AI adoption and monetisation are managed with discipline.",
           icon: "🚀"
         },
         {
-          title: "Developing Leaders",
-          situation: "Rising product managers need skills and confidence to lead independently.",
-          action: "I mentor rising product managers and heads, giving them the skills and confidence to lead independently and integrate AI into their team's roadmaps.",
+          title: "Building AI-First Leaders & Teams",
+          situation: "Product managers and heads may lack confidence or experience, and existing product functions often miss the modern AI-first practices needed to stay competitive.",
+          action: "I mentor product leaders to grow into confident decision-makers, while also designing product organisations equipped with the latest AI tools, platforms, and techniques — embedding experimentation, automation, and data-driven practices to accelerate delivery and innovation.",
           icon: "👥"
         },
         {
-          title: "Driving Innovation",
-          situation: "Need to transform raw ideas into scalable products.",
-          action: "Beyond stability, I bring a builder's mindset. Having filed <strong className='text-gold-highlight'>13 patents</strong> in AI and automation, I know how to take raw ideas and shape them into scalable, defensible products that generate lasting business value.",
+          title: "Innovation, Monetisation & High-Stakes Execution",
+          situation: "Companies may have raw ideas or AI capabilities but struggle to turn them into defensible innovation, profitable offerings, or successful large-scale launches.",
+          action: "With a track record of filing <strong className='text-gold-highlight'>13 patents</strong>, I bring a builder's mindset to creating differentiated products. I shape pricing, packaging, and data-driven features that turn technology into revenue, and I lead critical initiatives — from product launches to market entries — ensuring focused execution without disrupting core teams.",
           icon: "💡"
-        },
-        {
-          title: "AI-First Product Functions",
-          situation: "Teams need modern AI tools and techniques to stay competitive.",
-          action: "I set up product organisations that are equipped with the latest AI tools and techniques — from experimentation platforms to automation workflows — so your teams deliver faster, smarter, and with greater impact.",
-          icon: "🤖"
-        },
-        {
-          title: "AI-First Monetisation Strategies",
-          situation: "Innovation needs to translate into revenue streams.",
-          action: "I help turn innovation into revenue by shaping pricing, packaging, and AI-enabled features and data products that customers value and pay for.",
-          icon: "💰"
-        },
-        {
-          title: "High-Stakes Initiatives",
-          situation: "Critical launches, market entries, or enterprise pilots need focused ownership.",
-          action: "For critical launches, market entries, or enterprise pilots, I step in with focused ownership. My role is to deliver outcomes quickly while keeping core teams on track with their existing priorities.",
-          icon: "🎯"
         }
       ]
     }
