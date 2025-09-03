@@ -29,44 +29,6 @@ import {
 import { Link } from 'react-router-dom';
 
 const CPOServices = () => {
-  const services = [
-    {
-      icon: Target,
-      title: "Product Strategy & Vision",
-      description: "Define product roadmaps, market positioning, and strategic direction for sustainable growth.",
-      features: ["Market Analysis", "Competitive Intelligence", "Product Roadmapping", "Vision Development"],
-      link: "/product-strategy"
-    },
-    {
-      icon: Users,
-      title: "User Experience & Design",
-      description: "Create user-centered products with exceptional design and seamless user experiences.",
-      features: ["User Research", "UX/UI Design", "Usability Testing", "Design Systems"],
-      link: "/ux-design"
-    },
-    {
-      icon: BarChart3,
-      title: "Product Analytics & Insights",
-      description: "Data-driven product decisions with comprehensive analytics and performance tracking.",
-      features: ["Product Metrics", "User Behavior Analysis", "A/B Testing", "Performance Dashboards"],
-      link: "/product-analytics"
-    },
-    {
-      icon: Rocket,
-      title: "Go-to-Market Strategy",
-      description: "Launch products successfully with comprehensive go-to-market planning and execution.",
-      features: ["Launch Planning", "Market Entry Strategy", "Pricing Strategy", "Channel Development"],
-      link: "/go-to-market"
-    },
-    {
-      icon: Settings,
-      title: "Product Operations",
-      description: "Streamline product development processes and optimize team productivity.",
-      features: ["Process Optimization", "Team Coordination", "Tool Integration", "Workflow Automation"],
-      link: "/product-operations"
-    }
-  ];
-
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -87,154 +49,160 @@ const CPOServices = () => {
           </p>
         </div>
 
-        {/* Embedded CPO Section */}
-        <section id="embedded-cpo" className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-deep-charcoal mb-4 font-inter">
-              Embedded CPO
-            </h3>
-            <p className="text-lg text-cool-gray max-w-2xl mx-auto">
-              Full-time, dedicated Chief Product Officer integrated into your team, 
-              providing hands-on leadership and strategic direction.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.slice(0, 3).map((service, index) => (
-              <div
-                key={service.title}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 animate-slide-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-soft-mint rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-green transition-colors duration-300">
-                    <service.icon className="w-8 h-8 text-tech-green group-hover:text-white transition-colors duration-300" />
-                  </div>
-                  <h4 className="text-xl font-bold text-deep-charcoal mb-3 font-inter">
-                    {service.title}
-                  </h4>
-                  <p className="text-cool-gray mb-6">
-                    {service.description}
-                  </p>
-                </div>
-
-                <div className="space-y-3 mb-6">
-                  {service.features.map((feature) => (
-                    <div key={feature} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
-                      <span className="text-deep-charcoal font-medium">{feature}</span>
-                    </div>
-                  ))}
-                </div>
+        {/* Two Main Service Cards */}
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
+          {/* Embedded CPO Card */}
+          <div id="embedded-cpo" className="bg-white p-8 lg:p-10 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-up">
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-16 h-16 bg-tech-green rounded-xl flex items-center justify-center">
+                <Users className="w-8 h-8 text-white" />
               </div>
-            ))}
-          </div>
-
-          <div className="mt-12 bg-white p-8 rounded-2xl shadow-lg">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h4 className="text-2xl font-bold text-deep-charcoal mb-4 font-inter">
-                  What's Included
-                </h4>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-tech-green" />
-                    <span>Full-time dedicated CPO (40+ hours/week)</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-tech-green" />
-                    <span>Direct team leadership and mentoring</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-tech-green" />
-                    <span>Strategic planning and execution</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-tech-green" />
-                    <span>Product roadmap development</span>
-                  </div>
+                <h3 className="text-3xl font-bold text-deep-charcoal font-inter">
+                  Embedded CPO
+                </h3>
+                <p className="text-tech-green font-semibold">Full-Time Leadership</p>
+              </div>
+            </div>
+            
+            <p className="text-xl text-cool-gray mb-8 leading-relaxed">
+              Full-time, dedicated Chief Product Officer integrated into your team, 
+              providing hands-on leadership and strategic direction for maximum impact.
+            </p>
+            
+            <div className="space-y-4 mb-8">
+              <h4 className="text-xl font-bold text-deep-charcoal mb-4">What's Included:</h4>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-tech-green" />
+                  <span className="text-deep-charcoal">Full-time dedicated CPO (40+ hours/week)</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-tech-green" />
+                  <span className="text-deep-charcoal">Direct team leadership and mentoring</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-tech-green" />
+                  <span className="text-deep-charcoal">Strategic planning and execution</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-tech-green" />
+                  <span className="text-deep-charcoal">Product roadmap development</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-tech-green" />
+                  <span className="text-deep-charcoal">Market analysis and competitive intelligence</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-tech-green" />
+                  <span className="text-deep-charcoal">User experience optimization</span>
                 </div>
               </div>
-              <div className="bg-soft-mint p-6 rounded-xl">
-                <h5 className="font-bold text-tech-green mb-2">Best For:</h5>
-                <p className="text-deep-charcoal">
-                  Growing companies ready to scale their product organization 
-                  with dedicated leadership and hands-on execution.
-                </p>
+            </div>
+
+            <div className="bg-soft-mint p-6 rounded-xl mb-6">
+              <h5 className="font-bold text-tech-green mb-2 flex items-center space-x-2">
+                <Target className="w-5 h-5" />
+                <span>Best For:</span>
+              </h5>
+              <p className="text-deep-charcoal">
+                Growing companies ready to scale their product organization 
+                with dedicated leadership and hands-on execution.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="text-2xl font-bold text-tech-green">40+</div>
+                <div className="text-cool-gray text-sm">Hours/Week</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-tech-green">100%</div>
+                <div className="text-cool-gray text-sm">Dedicated</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-tech-green">24/7</div>
+                <div className="text-cool-gray text-sm">Availability</div>
               </div>
             </div>
           </div>
-        </section>
 
-        {/* Fractional CPO Section */}
-        <section id="fractional-cpo" className="mb-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-deep-charcoal mb-4 font-inter">
-              Fractional CPO
-            </h3>
-            <p className="text-lg text-cool-gray max-w-2xl mx-auto">
+          {/* Fractional CPO Card */}
+          <div id="fractional-cpo" className="bg-white p-8 lg:p-10 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            <div className="flex items-center space-x-4 mb-6">
+              <div className="w-16 h-16 bg-tech-green rounded-xl flex items-center justify-center">
+                <Clock className="w-8 h-8 text-white" />
+              </div>
+              <div>
+                <h3 className="text-3xl font-bold text-deep-charcoal font-inter">
+                  Fractional CPO
+                </h3>
+                <p className="text-tech-green font-semibold">Strategic Guidance</p>
+              </div>
+            </div>
+            
+            <p className="text-xl text-cool-gray mb-8 leading-relaxed">
               Part-time strategic product leadership, perfect for startups and 
               companies needing expert guidance without full-time commitment.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.slice(3, 5).map((service, index) => (
-              <div
-                key={service.title}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 animate-slide-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="mb-6">
-                  <div className="w-16 h-16 bg-soft-mint rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-green transition-colors duration-300">
-                    <service.icon className="w-8 h-8 text-tech-green group-hover:text-white transition-colors duration-300" />
-                  </div>
-                  <h4 className="text-xl font-bold text-deep-charcoal mb-3 font-inter">
-                    {service.title}
-                  </h4>
-                  <p className="text-cool-gray mb-6">
-                    {service.description}
-                  </p>
+            
+            <div className="space-y-4 mb-8">
+              <h4 className="text-xl font-bold text-deep-charcoal mb-4">What's Included:</h4>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-tech-green" />
+                  <span className="text-deep-charcoal">Flexible hours (10-20 hours/week)</span>
                 </div>
-
-                <div className="space-y-3 mb-6">
-                  {service.features.map((feature) => (
-                    <div key={feature} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
-                      <span className="text-deep-charcoal font-medium">{feature}</span>
-                    </div>
-                  ))}
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-tech-green" />
+                  <span className="text-deep-charcoal">Strategic planning and direction</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-tech-green" />
+                  <span className="text-deep-charcoal">Product roadmap guidance</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-tech-green" />
+                  <span className="text-deep-charcoal">Go-to-market strategy</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-tech-green" />
+                  <span className="text-deep-charcoal">Team mentoring and coaching</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-5 h-5 text-tech-green" />
+                  <span className="text-deep-charcoal">Product operations optimization</span>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
 
-          <div className="mt-12 bg-white p-8 rounded-2xl shadow-lg">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-tech-green rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-8 h-8 text-white" />
-                </div>
-                <h5 className="font-bold text-deep-charcoal mb-2">Flexible Hours</h5>
-                <p className="text-cool-gray text-sm">10-20 hours per week based on your needs</p>
+            <div className="bg-soft-mint p-6 rounded-xl mb-6">
+              <h5 className="font-bold text-tech-green mb-2 flex items-center space-x-2">
+                <Rocket className="w-5 h-5" />
+                <span>Best For:</span>
+              </h5>
+              <p className="text-deep-charcoal">
+                Startups and growing companies that need senior product expertise 
+                and strategic guidance at a cost-effective investment level.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="text-2xl font-bold text-tech-green">10-20</div>
+                <div className="text-cool-gray text-sm">Hours/Week</div>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-tech-green rounded-full flex items-center justify-center mx-auto mb-4">
-                  <DollarSign className="w-8 h-8 text-white" />
-                </div>
-                <h5 className="font-bold text-deep-charcoal mb-2">Cost Effective</h5>
-                <p className="text-cool-gray text-sm">Senior expertise at a fraction of full-time cost</p>
+              <div>
+                <div className="text-2xl font-bold text-tech-green">50%</div>
+                <div className="text-cool-gray text-sm">Cost Savings</div>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-tech-green rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-white" />
-                </div>
-                <h5 className="font-bold text-deep-charcoal mb-2">Strategic Focus</h5>
-                <p className="text-cool-gray text-sm">High-level strategy and key decision making</p>
+              <div>
+                <div className="text-2xl font-bold text-tech-green">Expert</div>
+                <div className="text-cool-gray text-sm">Level</div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* CPO Value Proposition */}
         <div className="bg-gradient-to-r from-soft-mint/30 to-soft-white p-8 lg:p-12 rounded-2xl mb-16 animate-fade-in">
@@ -267,7 +235,7 @@ const CPOServices = () => {
         </div>
 
         {/* Key Outcomes */}
-        <div className="bg-white p-8 lg:p-12 rounded-2xl shadow-lg animate-fade-in">
+        <div className="bg-white p-8 lg:p-12 rounded-2xl shadow-lg mb-16 animate-fade-in">
           <h3 className="text-3xl font-bold text-deep-charcoal mb-8 text-center font-inter">
             Expected Outcomes
           </h3>
@@ -292,7 +260,7 @@ const CPOServices = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16 animate-fade-in">
+        <div className="text-center animate-fade-in">
           <h3 className="text-3xl font-bold text-deep-charcoal mb-4 font-inter">
             Ready to Accelerate Your Product Success?
           </h3>
