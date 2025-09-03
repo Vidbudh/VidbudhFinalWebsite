@@ -59,13 +59,19 @@ const Header = () => {
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-light-gray py-2 z-50">
                   <Link
                     to="/gen-ai-services"
-                    className="w-full text-left px-4 py-3 text-cool-gray hover:text-tech-green hover:bg-soft-mint/20 transition-colors duration-200 font-medium"
+                    className="w-full text-left px-4 py-3 text-cool-gray hover:text-tech-green hover:bg-soft-mint/20 transition-colors duration-200 font-medium block"
                   >
                     Gen AI Services
                   </Link>
+                  <Link
+                    to="/cpo-services"
+                    className="w-full text-left px-4 py-3 text-cool-gray hover:text-tech-green hover:bg-soft-mint/20 transition-colors duration-200 font-medium block"
+                  >
+                    CPO Services
+                  </Link>
                   <div className="border-t border-light-gray my-1"></div>
                   <div className="px-4 py-2 text-xs font-semibold text-cool-gray uppercase tracking-wide">
-                    CPO Services
+                    CPO Service Types
                   </div>
                   <button
                     onClick={() => scrollToSection('embedded-cpo')}
@@ -125,9 +131,15 @@ const Header = () => {
                     >
                       Gen AI Services
                     </Link>
+                    <Link
+                      to="/cpo-services"
+                      className="block text-cool-gray hover:text-tech-green transition-colors duration-200 font-medium text-left py-2"
+                    >
+                      CPO Services
+                    </Link>
                     <div className="border-t border-light-gray my-2"></div>
                     <div className="text-xs font-semibold text-cool-gray uppercase tracking-wide py-1">
-                      CPO Services
+                      CPO Service Types
                     </div>
                     <button
                       onClick={() => scrollToSection('embedded-cpo')}

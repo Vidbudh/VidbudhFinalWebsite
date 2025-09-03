@@ -127,13 +127,13 @@ const Services = () => {
               </div>
             </div>
 
-            <button
-              onClick={() => document.getElementById('cpo-services')?.scrollIntoView({ behavior: 'smooth' })}
+            <Link
+              to="/cpo-services"
               className="w-full bg-tech-green text-white px-6 py-3 rounded-lg hover:bg-vibrant-green transition-colors duration-200 font-semibold flex items-center justify-center space-x-2"
             >
               <span>Explore CPO Services</span>
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </Link>
           </div>
         </div>
 
