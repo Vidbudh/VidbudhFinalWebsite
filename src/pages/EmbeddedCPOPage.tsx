@@ -117,19 +117,22 @@ const EmbeddedCPOPage = () => {
       description: "Call me in when your organisation is moving through major shifts and needs clarity.",
       scenarios: [
         {
-          title: "Freeing Up Leadership Bandwidth",
-          action: "I take ownership of product leadership so founders and CEOs can focus on fundraising, partnerships, or expansion — with confidence that AI adoption and monetisation are managed with rigour.",
-          icon: "🚀"
+          title: "M&A and Restructuring",
+          situation: "Mergers, acquisitions, or reorganisations often leave teams fragmented, with overlapping processes and unclear product direction.",
+          action: "I align people, processes, and products so integrations create strength instead of friction, ensuring your product vision remains intact while unlocking synergies.",
+          icon: "🔄"
         },
         {
-          title: "Building AI-First Leaders & Teams",
-          action: "I mentor product managers and heads into confident, independent leaders while also designing product organisations that use the latest AI tools, platforms, and techniques. This ensures your product function accelerates delivery, embeds experimentation and automation, and stays future-ready.",
-          icon: "👥"
+          title: "Scaling for Growth",
+          situation: "Rapid growth can overwhelm existing structures, slowing delivery and creating bottlenecks. Without AI-first practices, scaling often amplifies inefficiencies.",
+          action: "I design structures and operating rhythms that support expansion, embedding AI-first capabilities from day one so growth is sustainable and future-ready.",
+          icon: "📈"
         },
         {
-          title: "Innovation, Monetisation & High-Stakes Execution",
-          action: "With a track record of filing <strong className='text-gold-highlight'>13 patents</strong>, I bring a builder's mindset to creating defensible innovation. I design pricing, packaging, and data-driven features that turn technology into revenue, while also leading critical initiatives — from launches to market entries — ensuring fast, focused execution without disrupting core teams.",
-          icon: "💡"
+          title: "Leadership & Foundations",
+          situation: "Current leadership may not match the organisation's evolving needs, and product/design foundations may not exist or be built to scale.",
+          action: "I bridge leadership gaps while defining what your long-term CPO profile should look like, and I establish product and design functions that are scalable, modern, and AI-ready from the start.",
+          icon: "🏗️"
         }
       ]
     },
