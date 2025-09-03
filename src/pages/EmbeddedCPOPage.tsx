@@ -129,12 +129,6 @@ const EmbeddedCPOPage = () => {
           icon: "📈"
         },
         {
-          title: "Evolving Leadership Needs",
-          situation: "Current leadership gaps need bridging while planning for the future.",
-          action: "Bridge current gaps while defining what your permanent CPO profile should look like.",
-          icon: "🎯"
-        },
-        {
           title: "Building Foundations",
           situation: "Need sustainable product and design functions for the future.",
           action: "Establish product and design functions that can scale sustainably, with AI-readiness built in.",
