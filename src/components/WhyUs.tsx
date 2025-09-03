@@ -88,8 +88,8 @@ const WhyUs = () => {
                     <Award className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-deep-charcoal">Award Winner</div>
-                    <div className="text-cool-gray">Gen AI Innovation 2024</div>
+                    <div className="text-2xl font-bold text-deep-charcoal">Expert Team</div>
+                    <div className="text-cool-gray">15+ Years Experience</div>
                   </div>
                 </div>
               </div>
