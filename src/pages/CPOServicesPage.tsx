@@ -199,6 +199,47 @@ const CPOServicesPage = () => {
                 </div>
               </div>
 
-              <div className="bg-soft-mint
+              <div className="bg-soft-mint/20 p-6 rounded-xl">
+                <p className="text-deep-charcoal">Additional content here</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA Section */}
+      <section id="contact-cta" className="py-20 bg-gradient-to-br from-tech-green to-vibrant-green">
+        <div className="container mx-auto px-6 text-center">
+          <div className="animate-fade-in">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 font-inter">
+              Ready to Transform Your Product Leadership?
+            </h2>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+              Let's discuss how our CPO services can drive your product excellence and business growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-white text-tech-green px-8 py-4 rounded-xl hover:bg-soft-white transition-all duration-200 font-semibold flex items-center justify-center space-x-2"
+              >
+                <MessageCircle className="w-5 h-5" />
+                <span>Schedule Consultation</span>
+              </Link>
+              <a
+                href="https://wa.me/1234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-tech-green transition-all duration-200 font-semibold flex items-center justify-center space-x-2"
+              >
+                <Headphones className="w-5 h-5" />
+                <span>WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   )
 }
