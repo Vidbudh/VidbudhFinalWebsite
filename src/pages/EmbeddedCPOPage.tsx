@@ -365,15 +365,10 @@ const EmbeddedCPOPage = () => {
             </p>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-8">
             {frameworkPhases.map((phase, index) => (
-              <div
-                key={phase.phase}
-                className={`grid lg:grid-cols-2 gap-12 items-start ${
-                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                }`}
-              >
-                <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''} animate-slide-in-left`}>
+              <div key={phase.phase} className="animate-slide-in-left">
+                <div className="bg-white rounded-2xl shadow-lg p-8">
                   <div className="flex items-center space-x-4 mb-6">
                     <div className={`w-16 h-16 ${phase.color} rounded-full flex items-center justify-center`}>
                       <phase.icon className="w-8 h-8 text-white" />
@@ -382,36 +377,36 @@ const EmbeddedCPOPage = () => {
                       <h3 className="text-3xl font-bold text-deep-charcoal font-inter">
                         {phase.phase}: {phase.title}
                       </h3>
+                      <p className="text-lg text-cool-gray mt-2">
+                        {phase.description}
+                      </p>
                     </div>
                   </div>
-                  <p className="text-xl text-cool-gray mb-8">
-                    {phase.description}
-                  </p>
                   
-                  <div className="space-y-6">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {phase.scenarios.map((scenario, pointIndex) => (
-                      <div key={pointIndex} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                      <div key={pointIndex} className="bg-gray-50 p-4 rounded-lg hover:bg-gray-100 transition-all duration-300">
                         <div className="flex items-start space-x-4">
-                          <div className="text-3xl flex-shrink-0">
+                          <div className="text-2xl flex-shrink-0">
                             {scenario.icon}
                           </div>
                           <div className="flex-1">
-                            <h4 className="text-lg font-bold text-deep-charcoal mb-3 font-inter">
+                            <h4 className="text-base font-bold text-deep-charcoal mb-2 font-inter">
                               {scenario.title}
                             </h4>
-                            <div className="mb-4">
-                              <div className="text-sm font-semibold text-cool-gray mb-2 uppercase tracking-wide">
+                            <div className="mb-3">
+                              <div className="text-xs font-semibold text-cool-gray mb-1 uppercase tracking-wide">
                                 Situation:
                               </div>
-                              <p className="text-cool-gray leading-relaxed">
+                              <p className="text-sm text-cool-gray leading-relaxed">
                                 {scenario.situation}
                               </p>
                             </div>
                             <div>
-                              <div className="text-sm font-semibold text-tech-green mb-2 uppercase tracking-wide">
+                              <div className="text-xs font-semibold text-tech-green mb-1 uppercase tracking-wide">
                                 My Action:
                               </div>
-                              <p className="text-deep-charcoal leading-relaxed font-medium">
+                              <p className="text-sm text-deep-charcoal leading-relaxed font-medium">
                                 <span dangerouslySetInnerHTML={{ __html: scenario.action }} />
                               </p>
                             </div>
@@ -419,21 +414,6 @@ const EmbeddedCPOPage = () => {
                         </div>
                       </div>
                     ))}
-                  </div>
-                </div>
-                <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''} animate-slide-in-right`}>
-                  <div className="bg-white p-8 rounded-2xl shadow-lg">
-                    <img
-                      src={`https://images.pexels.com/photos/${
-                        index === 0 ? '3184360' : 
-                        index === 1 ? '3184465' : '3183150'
-                      }/pexels-photo-${
-                        index === 0 ? '3184360' : 
-                        index === 1 ? '3184465' : '3183150'
-                      }.jpeg?auto=compress&cs=tinysrgb&w=600`}
-                      alt={phase.title}
-                      className="w-full h-64 object-cover rounded-xl"
-                    />
                   </div>
                 </div>
               </div>
