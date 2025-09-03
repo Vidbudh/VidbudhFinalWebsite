@@ -52,32 +52,32 @@ const EmbeddedCPOPage = () => {
     {
       icon: Brain,
       title: "AI-First Expertise",
-      description: "I specialise in shaping and scaling AI and GenAI-first products — ensuring they're not just technically sound, but usable, ethical, and commercially successful."
+      description: "I specialise in shaping and scaling **AI and GenAI-first products** — ensuring they're not just technically sound, but **usable, ethical, and commercially successful**."
     },
     {
       icon: Award,
       title: "Innovation Track Record",
-      description: "At Accenture, I led a product IP group that filed 13 patents across AI, automation, and enterprise platforms. I know how to turn ideas into defensible assets and scalable offerings."
+      description: "At **Accenture**, I led a product IP group that filed **13 patents** across **AI, automation, and enterprise platforms**. I know how to turn ideas into **defensible assets** and **scalable offerings**."
     },
     {
       icon: Users,
       title: "Building AI-First Product Teams",
-      description: "I help organisations design and grow AI-first product functions, equipping them with the latest tools, platforms, and techniques so they can accelerate delivery and stay competitive."
+      description: "I help organisations design and grow **AI-first product functions**, equipping them with the **latest tools, platforms, and techniques** so they can **accelerate delivery** and **stay competitive**."
     },
     {
       icon: Building,
       title: "Proven Corporate Leadership",
-      description: "With 23 years at Accenture, Cognizant, and Beroe, I bring the rigour of enterprise-scale leadership with the agility of a startup founder."
+      description: "With **23 years** at **Accenture, Cognizant, and Beroe**, I bring the rigour of **enterprise-scale leadership** with the agility of a **startup founder**."
     },
     {
       icon: DollarSign,
       title: "Monetisation Mindset",
-      description: "I connect technology to revenue, designing pricing, packaging, and go-to-market strategies that turn innovation into business value."
+      description: "I connect **technology to revenue**, designing **pricing, packaging, and go-to-market strategies** that turn **innovation into business value**."
     },
     {
       icon: Settings,
       title: "Hands-On Execution",
-      description: "I don't just advise — I run the function, mentor teams, and deliver outcomes."
+      description: "I don't just advise — I **run the function**, **mentor teams**, and **deliver outcomes**."
     }
   ];
 
