@@ -101,12 +101,12 @@ const Hero = () => {
               
               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg animate-float" style={{ animationDelay: '1s' }}>
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gold-highlight rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold">99%</span>
+                  <div className="w-12 h-12 bg-tech-green rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold">AI</span>
                   </div>
                   <div>
-                    <div className="font-semibold text-deep-charcoal">Accuracy</div>
-                    <div className="text-cool-gray text-sm">Guaranteed</div>
+                    <div className="font-semibold text-deep-charcoal">Expert Solutions</div>
+                    <div className="text-cool-gray text-sm">Proven Results</div>
                   </div>
                 </div>
               </div>
