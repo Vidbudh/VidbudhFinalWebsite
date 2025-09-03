@@ -134,6 +134,30 @@ const EmbeddedCPOPage = () => {
           action: "Establish product and design functions that can scale sustainably, with AI-readiness built in.",
           icon: "🏗️"
         }
+        {
+          title: "Freeing Up Leadership Bandwidth",
+          situation: "Founders and CEOs need to focus on fundraising, partnerships, or expansion.",
+          action: "I take ownership of product leadership so founders and CEOs can focus on fundraising, partnerships, or expansion — with confidence that AI adoption and monetisation are managed with rigour.",
+          icon: "🚀"
+        },
+        {
+          title: "Building AI-First Product Leaders & Teams",
+          situation: "Product managers and teams need modern AI capabilities and leadership development.",
+          action: "I mentor product managers and heads to become confident, independent leaders while also designing product organisations equipped with the latest AI tools, platforms, and techniques. This combination accelerates delivery, embeds experimentation and automation, and ensures your product function is both future-ready and commercially impactful.",
+          icon: "👥"
+        },
+        {
+          title: "Innovation at Scale",
+          situation: "Raw ideas need to be transformed into scalable, differentiated products.",
+          action: "With a track record of filing <strong className='text-gold-highlight'>13 patents</strong>, I bring a builder's mindset to shaping defensible innovation. I help teams turn raw ideas into scalable, differentiated products that strengthen competitive advantage.",
+          icon: "💡"
+        },
+        {
+          title: "Monetisation & High-Stakes Execution",
+          situation: "Technology needs to translate into revenue and critical initiatives need focused leadership.",
+          action: "I design pricing, packaging, and data-driven features that turn technology into revenue, and I lead critical initiatives — from launches to market entries — ensuring focused execution without derailing core teams.",
+          icon: "💰"
+        }
       ]
     },
     {
