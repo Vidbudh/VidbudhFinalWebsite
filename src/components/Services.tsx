@@ -13,102 +13,128 @@ import {
 import { Link } from 'react-router-dom';
 
 const Services = () => {
-  const services = [
-    {
-      icon: Brain,
-      title: "Gen AI Strategy",
-      description: "Define your generative AI roadmap and identify high-impact use cases that align with your business objectives.",
-      features: ["Strategic Planning", "Use Case Identification", "ROI Analysis", "Technology Roadmap"],
-      link: "/ai-strategy"
-    },
-    {
-      icon: Rocket,
-      title: "Gen AI Proof of Concept",
-      description: "Validate your generative AI ideas with rapid prototyping and feasibility testing before full implementation.",
-      features: ["Rapid Prototyping", "Feasibility Analysis", "Risk Assessment", "Success Metrics"],
-      link: "/gen-ai-poc"
-    },
-    {
-      icon: Settings,
-      title: "AI Implementations",
-      description: "Full-scale AI solution development and deployment with enterprise-grade architecture.",
-      features: ["Custom Development", "System Integration", "Scalable Architecture", "Production Deployment"],
-      link: "/gen-ai-implementation"
-    },
-    {
-      icon: Search,
-      title: "Gen AI Audit",
-      description: "Comprehensive evaluation of your existing AI systems, processes, and performance optimization.",
-      features: ["Performance Review", "Security Assessment", "Compliance Check", "Optimization Recommendations"],
-      link: "/gen-ai-audit"
-    },
-    {
-      icon: GraduationCap,
-      title: "Gen AI Workshops",
-      description: "Hands-on training programs to upskill your team in generative AI technologies and best practices.",
-      features: ["Team Training", "Hands-on Labs", "Best Practices", "Certification Programs"],
-      link: "/ai-workshops"
-    }
-  ];
-
   return (
     <section id="services" className="py-20 bg-soft-white">
-    <section id="gen-ai-services" className="py-20 bg-soft-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-deep-charcoal mb-6 font-inter">
-            Our Generative AI Services
+            Our Services
           </h2>
           <p className="text-xl text-cool-gray max-w-3xl mx-auto">
-            From strategy to implementation, we provide comprehensive generative AI solutions 
-            tailored to accelerate your business transformation and drive measurable results.
+            Comprehensive AI and product leadership solutions to transform your business 
+            and drive measurable results across all aspects of your organization.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 animate-slide-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-soft-mint rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-green transition-colors duration-300">
-                  <service.icon className="w-8 h-8 text-tech-green group-hover:text-white transition-colors duration-300" />
-                </div>
-                <h3 className="text-2xl font-bold text-deep-charcoal mb-3 font-inter">
-                  {service.title}
-                </h3>
-                <p className="text-cool-gray mb-6">
-                  {service.description}
-                </p>
+        {/* Main Service Cards */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {/* Gen AI Services Card */}
+          <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 animate-slide-up">
+            <div className="mb-6">
+              <div className="w-16 h-16 bg-soft-mint rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-green transition-colors duration-300">
+                <Brain className="w-8 h-8 text-tech-green group-hover:text-white transition-colors duration-300" />
               </div>
-
-              <div className="space-y-3">
-                {service.features.map((feature) => (
-                  <div key={feature} className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
-                    <span className="text-deep-charcoal font-medium">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              {service.link ? (
-                <Link
-                  to={service.link}
-                  className="mt-6 text-tech-green font-semibold flex items-center space-x-2 group-hover:text-vibrant-green transition-colors duration-200"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              ) : (
-                <button className="mt-6 text-tech-green font-semibold flex items-center space-x-2 group-hover:text-vibrant-green transition-colors duration-200">
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              )}
+              <h3 className="text-3xl font-bold text-deep-charcoal mb-3 font-inter">
+                Generative AI Services
+              </h3>
+              <p className="text-xl text-cool-gray mb-6">
+                Comprehensive generative AI solutions from strategy to implementation, 
+                designed to transform your business with cutting-edge AI technology.
+              </p>
             </div>
-          ))}
+
+            <div className="space-y-3 mb-8">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
+                <span className="text-deep-charcoal font-medium">AI Strategy & Planning</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
+                <span className="text-deep-charcoal font-medium">Proof of Concept Development</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
+                <span className="text-deep-charcoal font-medium">Full-Scale Implementation</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
+                <span className="text-deep-charcoal font-medium">AI System Audits</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
+                <span className="text-deep-charcoal font-medium">Training & Workshops</span>
+              </div>
+            </div>
+
+            <div className="bg-soft-mint p-4 rounded-lg mb-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-tech-green mb-1">50+</div>
+                <div className="text-cool-gray text-sm">Gen AI Projects Delivered</div>
+              </div>
+            </div>
+
+            <Link
+              to="/gen-ai-services"
+              className="w-full bg-tech-green text-white px-6 py-3 rounded-lg hover:bg-vibrant-green transition-colors duration-200 font-semibold flex items-center justify-center space-x-2"
+            >
+              <span>Explore Gen AI Services</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* CPO Services Card */}
+          <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 animate-slide-up" style={{ animationDelay: '0.1s' }}>
+            <div className="mb-6">
+              <div className="w-16 h-16 bg-soft-mint rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-green transition-colors duration-300">
+                <BarChart3 className="w-8 h-8 text-tech-green group-hover:text-white transition-colors duration-300" />
+              </div>
+              <h3 className="text-3xl font-bold text-deep-charcoal mb-3 font-inter">
+                CPO Services
+              </h3>
+              <p className="text-xl text-cool-gray mb-6">
+                Expert Chief Product Officer services to drive product excellence, 
+                strategic growth, and market leadership for your organization.
+              </p>
+            </div>
+
+            <div className="space-y-3 mb-8">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
+                <span className="text-deep-charcoal font-medium">Embedded CPO (Full-time)</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
+                <span className="text-deep-charcoal font-medium">Fractional CPO (Part-time)</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
+                <span className="text-deep-charcoal font-medium">Product Strategy & Roadmaps</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
+                <span className="text-deep-charcoal font-medium">Team Leadership & Mentoring</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
+                <span className="text-deep-charcoal font-medium">Go-to-Market Strategy</span>
+              </div>
+            </div>
+
+            <div className="bg-soft-mint p-4 rounded-lg mb-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-tech-green mb-1">15+</div>
+                <div className="text-cool-gray text-sm">Years Product Leadership</div>
+              </div>
+            </div>
+
+            <button
+              onClick={() => document.getElementById('cpo-services')?.scrollIntoView({ behavior: 'smooth' })}
+              className="w-full bg-tech-green text-white px-6 py-3 rounded-lg hover:bg-vibrant-green transition-colors duration-200 font-semibold flex items-center justify-center space-x-2"
+            >
+              <span>Explore CPO Services</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
         </div>
 
         {/* Service Process Flow */}

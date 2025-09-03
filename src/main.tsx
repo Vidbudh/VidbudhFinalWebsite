@@ -8,6 +8,7 @@ import GenAIPOCPage from './pages/GenAIPOCPage.tsx';
 import GenAIImplementationPage from './pages/GenAIImplementationPage.tsx';
 import GenAIAuditPage from './pages/GenAIAuditPage.tsx';
 import AIWorkshopsPage from './pages/AIWorkshopsPage.tsx';
+import GenAIServicesPage from './pages/GenAIServicesPage.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
@@ -21,6 +22,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/gen-ai-implementation" element={<GenAIImplementationPage />} />
         <Route path="/gen-ai-audit" element={<GenAIAuditPage />} />
         <Route path="/ai-workshops" element={<AIWorkshopsPage />} />
+        <Route path="/gen-ai-services" element={<GenAIServicesPage />} />
       </Routes>
     </Router>
   </StrictMode>

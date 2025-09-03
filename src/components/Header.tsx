@@ -56,12 +56,12 @@ const Header = () => {
               
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-light-gray py-2 z-50">
-                  <button
-                    onClick={() => scrollToSection('gen-ai-services')}
+                  <Link
+                    to="/gen-ai-services"
                     className="w-full text-left px-4 py-3 text-cool-gray hover:text-tech-green hover:bg-soft-mint/20 transition-colors duration-200 font-medium"
                   >
                     Gen AI Services
-                  </button>
+                  </Link>
                   <div className="border-t border-light-gray my-1"></div>
                   <div className="px-4 py-2 text-xs font-semibold text-cool-gray uppercase tracking-wide">
                     CPO Services
@@ -118,12 +118,12 @@ const Header = () => {
                 
                 {isServicesOpen && (
                   <div className="mt-2 ml-4 space-y-2">
-                    <button
-                      onClick={() => scrollToSection('gen-ai-services')}
+                    <Link
+                      to="/gen-ai-services"
                       className="block text-cool-gray hover:text-tech-green transition-colors duration-200 font-medium text-left py-2"
                     >
                       Gen AI Services
-                    </button>
+                    </Link>
                     <div className="border-t border-light-gray my-2"></div>
                     <div className="text-xs font-semibold text-cool-gray uppercase tracking-wide py-1">
                       CPO Services

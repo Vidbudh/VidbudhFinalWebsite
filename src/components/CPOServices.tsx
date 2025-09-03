@@ -37,7 +37,7 @@ const CPOServices = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-soft-mint/20 to-soft-white">
+    <section id="cpo-services" className="py-20 bg-gradient-to-br from-soft-mint/20 to-soft-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-deep-charcoal mb-6 font-inter">
