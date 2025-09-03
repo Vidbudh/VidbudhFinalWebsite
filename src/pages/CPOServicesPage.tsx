@@ -243,3 +243,4 @@ const CPOServicesPage = () => {
     </div>
   )
 }
+export default CPOServicesPage
