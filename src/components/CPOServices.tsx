@@ -125,6 +125,16 @@ const CPOServices = () => {
                 <div className="text-cool-gray text-sm">Availability</div>
               </div>
             </div>
+
+            <div className="mt-6">
+              <Link
+                to="/embedded-cpo"
+                className="w-full bg-tech-green text-white px-6 py-3 rounded-lg hover:bg-vibrant-green transition-colors duration-200 font-semibold flex items-center justify-center space-x-2"
+              >
+                <span>Learn More</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
 
           {/* Fractional CPO Card */}
