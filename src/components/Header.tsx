@@ -38,10 +38,10 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {['Services', 'Why Us', 'Testimonials', 'Contact'].map((item) => (
+            {['Gen AI Services', 'CPO Services', 'Why Us', 'Testimonials', 'Contact'].map((item) => (
               <button
                 key={item}
-                onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
+                onClick={() => scrollToSection(item.toLowerCase().replace(/\s+/g, '-'))}
                 className="text-cool-gray hover:text-tech-green transition-colors duration-200 font-medium"
               >
                 {item}
@@ -62,10 +62,10 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-light-gray pt-4">
             <div className="flex flex-col space-y-4">
-              {['Services', 'Why Us', 'Testimonials', 'Contact'].map((item) => (
+              {['Gen AI Services', 'CPO Services', 'Why Us', 'Testimonials', 'Contact'].map((item) => (
                 <button
                   key={item}
-                  onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
+                  onClick={() => scrollToSection(item.toLowerCase().replace(/\s+/g, '-'))}
                   className="text-cool-gray hover:text-tech-green transition-colors duration-200 font-medium text-left"
                 >
                   {item}

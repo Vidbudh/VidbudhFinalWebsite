@@ -53,6 +53,7 @@ const Services = () => {
 
   return (
     <section id="services" className="py-20 bg-soft-white">
+    <section id="gen-ai-services" className="py-20 bg-soft-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-deep-charcoal mb-6 font-inter">
