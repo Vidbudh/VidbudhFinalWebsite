@@ -62,11 +62,21 @@ const Header = () => {
                   >
                     Gen AI Services
                   </button>
-                  <button
-                    onClick={() => scrollToSection('cpo-services')}
-                    className="w-full text-left px-4 py-3 text-cool-gray hover:text-tech-green hover:bg-soft-mint/20 transition-colors duration-200 font-medium"
-                  >
+                  <div className="border-t border-light-gray my-1"></div>
+                  <div className="px-4 py-2 text-xs font-semibold text-cool-gray uppercase tracking-wide">
                     CPO Services
+                  </div>
+                  <button
+                    onClick={() => scrollToSection('embedded-cpo')}
+                    className="w-full text-left px-6 py-2 text-cool-gray hover:text-tech-green hover:bg-soft-mint/20 transition-colors duration-200 text-sm"
+                  >
+                    Embedded CPO
+                  </button>
+                  <button
+                    onClick={() => scrollToSection('fractional-cpo')}
+                    className="w-full text-left px-6 py-2 text-cool-gray hover:text-tech-green hover:bg-soft-mint/20 transition-colors duration-200 text-sm"
+                  >
+                    Fractional CPO
                   </button>
                 </div>
               )}
@@ -114,11 +124,21 @@ const Header = () => {
                     >
                       Gen AI Services
                     </button>
-                    <button
-                      onClick={() => scrollToSection('cpo-services')}
-                      className="block text-cool-gray hover:text-tech-green transition-colors duration-200 font-medium text-left py-2"
-                    >
+                    <div className="border-t border-light-gray my-2"></div>
+                    <div className="text-xs font-semibold text-cool-gray uppercase tracking-wide py-1">
                       CPO Services
+                    </div>
+                    <button
+                      onClick={() => scrollToSection('embedded-cpo')}
+                      className="block text-cool-gray hover:text-tech-green transition-colors duration-200 text-left py-2 ml-2 text-sm"
+                    >
+                      Embedded CPO
+                    </button>
+                    <button
+                      onClick={() => scrollToSection('fractional-cpo')}
+                      className="block text-cool-gray hover:text-tech-green transition-colors duration-200 text-left py-2 ml-2 text-sm"
+                    >
+                      Fractional CPO
                     </button>
                   </div>
                 )}

@@ -75,7 +75,7 @@ const CPOServices = () => {
   };
 
   return (
-    <section id="cpo-services" className="py-20 bg-gradient-to-br from-soft-mint/20 to-soft-white">
+    <section className="py-20 bg-gradient-to-br from-soft-mint/20 to-soft-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-deep-charcoal mb-6 font-inter">
@@ -87,51 +87,154 @@ const CPOServices = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 animate-slide-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-soft-mint rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-green transition-colors duration-300">
-                  <service.icon className="w-8 h-8 text-tech-green group-hover:text-white transition-colors duration-300" />
+        {/* Embedded CPO Section */}
+        <section id="embedded-cpo" className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-deep-charcoal mb-4 font-inter">
+              Embedded CPO
+            </h3>
+            <p className="text-lg text-cool-gray max-w-2xl mx-auto">
+              Full-time, dedicated Chief Product Officer integrated into your team, 
+              providing hands-on leadership and strategic direction.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.slice(0, 3).map((service, index) => (
+              <div
+                key={service.title}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-soft-mint rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-green transition-colors duration-300">
+                    <service.icon className="w-8 h-8 text-tech-green group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <h4 className="text-xl font-bold text-deep-charcoal mb-3 font-inter">
+                    {service.title}
+                  </h4>
+                  <p className="text-cool-gray mb-6">
+                    {service.description}
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-deep-charcoal mb-3 font-inter">
-                  {service.title}
-                </h3>
-                <p className="text-cool-gray mb-6">
-                  {service.description}
+
+                <div className="space-y-3 mb-6">
+                  {service.features.map((feature) => (
+                    <div key={feature} className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
+                      <span className="text-deep-charcoal font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 bg-white p-8 rounded-2xl shadow-lg">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h4 className="text-2xl font-bold text-deep-charcoal mb-4 font-inter">
+                  What's Included
+                </h4>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-tech-green" />
+                    <span>Full-time dedicated CPO (40+ hours/week)</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-tech-green" />
+                    <span>Direct team leadership and mentoring</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-tech-green" />
+                    <span>Strategic planning and execution</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-tech-green" />
+                    <span>Product roadmap development</span>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-soft-mint p-6 rounded-xl">
+                <h5 className="font-bold text-tech-green mb-2">Best For:</h5>
+                <p className="text-deep-charcoal">
+                  Growing companies ready to scale their product organization 
+                  with dedicated leadership and hands-on execution.
                 </p>
               </div>
-
-              <div className="space-y-3 mb-6">
-                {service.features.map((feature) => (
-                  <div key={feature} className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
-                    <span className="text-deep-charcoal font-medium">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              {service.link ? (
-                <Link
-                  to={service.link}
-                  className="text-tech-green font-semibold flex items-center space-x-2 group-hover:text-vibrant-green transition-colors duration-200"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              ) : (
-                <button className="text-tech-green font-semibold flex items-center space-x-2 group-hover:text-vibrant-green transition-colors duration-200">
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              )}
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
+
+        {/* Fractional CPO Section */}
+        <section id="fractional-cpo" className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-deep-charcoal mb-4 font-inter">
+              Fractional CPO
+            </h3>
+            <p className="text-lg text-cool-gray max-w-2xl mx-auto">
+              Part-time strategic product leadership, perfect for startups and 
+              companies needing expert guidance without full-time commitment.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {services.slice(3, 5).map((service, index) => (
+              <div
+                key={service.title}
+                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-soft-mint rounded-xl flex items-center justify-center mb-4 group-hover:bg-tech-green transition-colors duration-300">
+                    <service.icon className="w-8 h-8 text-tech-green group-hover:text-white transition-colors duration-300" />
+                  </div>
+                  <h4 className="text-xl font-bold text-deep-charcoal mb-3 font-inter">
+                    {service.title}
+                  </h4>
+                  <p className="text-cool-gray mb-6">
+                    {service.description}
+                  </p>
+                </div>
+
+                <div className="space-y-3 mb-6">
+                  {service.features.map((feature) => (
+                    <div key={feature} className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-tech-green flex-shrink-0" />
+                      <span className="text-deep-charcoal font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 bg-white p-8 rounded-2xl shadow-lg">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-tech-green rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <h5 className="font-bold text-deep-charcoal mb-2">Flexible Hours</h5>
+                <p className="text-cool-gray text-sm">10-20 hours per week based on your needs</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-tech-green rounded-full flex items-center justify-center mx-auto mb-4">
+                  <DollarSign className="w-8 h-8 text-white" />
+                </div>
+                <h5 className="font-bold text-deep-charcoal mb-2">Cost Effective</h5>
+                <p className="text-cool-gray text-sm">Senior expertise at a fraction of full-time cost</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-tech-green rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h5 className="font-bold text-deep-charcoal mb-2">Strategic Focus</h5>
+                <p className="text-cool-gray text-sm">High-level strategy and key decision making</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* CPO Value Proposition */}
         <div className="bg-gradient-to-r from-soft-mint/30 to-soft-white p-8 lg:p-12 rounded-2xl mb-16 animate-fade-in">
