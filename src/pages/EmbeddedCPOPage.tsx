@@ -88,10 +88,25 @@ const EmbeddedCPOPage = () => {
       color: "bg-red-500",
       title: "Crisis & Continuity",
       description: "Bring me in when leadership gaps or turbulence risk slowing the organisation down.",
-      points: [
-        "Crisis management → Market shifts, leadership churn, or underperforming teams can make product spend balloon while value creation stalls. I step in to diagnose quickly, reset focus, and align delivery with business outcomes — ensuring AI projects are grounded in results, not hype.",
-        "Covering leadership voids → A departing CPO, maternity/sabbatical leave, or a delayed permanent hire can leave product strategy vulnerable. I provide continuity, keep teams moving, and safeguard ongoing AI or digital initiatives until the right leader is secured.",
-        "Protecting morale → Teams often lose energy when direction is unclear. I anchor them through transparency and alignment, building confidence that their work is meaningful — even while adopting new tools like AI into workflows."
+      scenarios: [
+        {
+          title: "Crisis Management",
+          situation: "Market shifts, leadership churn, or underperforming teams can make product spend balloon while value creation stalls.",
+          action: "I step in to diagnose quickly, reset focus, and align delivery with business outcomes — ensuring AI projects are grounded in results, not hype.",
+          icon: "🚨"
+        },
+        {
+          title: "Covering Leadership Voids",
+          situation: "A departing CPO, maternity/sabbatical leave, or a delayed permanent hire can leave product strategy vulnerable.",
+          action: "I provide continuity, keep teams moving, and safeguard ongoing AI or digital initiatives until the right leader is secured.",
+          icon: "🛡️"
+        },
+        {
+          title: "Protecting Morale",
+          situation: "Teams often lose energy when direction is unclear.",
+          action: "I anchor them through transparency and alignment, building confidence that their work is meaningful — even while adopting new tools like AI into workflows.",
+          icon: "💪"
+        }
       ]
     },
     {
@@ -100,11 +115,31 @@ const EmbeddedCPOPage = () => {
       color: "bg-yellow-500",
       title: "Change & Scaling",
       description: "Call me in when your organisation is moving through major shifts and needs clarity.",
-      points: [
-        "M&A and restructuring → Align people, processes, and products so integrations strengthen instead of fragmenting.",
-        "Scaling → Design structures and rhythms that support growth, embedding AI-first capability from day one.",
-        "Evolving leadership needs → Bridge current gaps while defining what your permanent CPO profile should look like.",
-        "Building foundations → Establish product and design functions that can scale sustainably, with AI-readiness built in."
+      scenarios: [
+        {
+          title: "M&A and Restructuring",
+          situation: "Complex integrations risk fragmenting teams and processes.",
+          action: "Align people, processes, and products so integrations strengthen instead of fragmenting.",
+          icon: "🔄"
+        },
+        {
+          title: "Scaling Operations",
+          situation: "Growth demands new structures and capabilities.",
+          action: "Design structures and rhythms that support growth, embedding AI-first capability from day one.",
+          icon: "📈"
+        },
+        {
+          title: "Evolving Leadership Needs",
+          situation: "Current leadership gaps need bridging while planning for the future.",
+          action: "Bridge current gaps while defining what your permanent CPO profile should look like.",
+          icon: "🎯"
+        },
+        {
+          title: "Building Foundations",
+          situation: "Need sustainable product and design functions for the future.",
+          action: "Establish product and design functions that can scale sustainably, with AI-readiness built in.",
+          icon: "🏗️"
+        }
       ]
     },
     {
@@ -113,13 +148,43 @@ const EmbeddedCPOPage = () => {
       color: "bg-green-500",
       title: "Acceleration & Value Creation",
       description: "Engage me when stability is secured and the focus shifts to growth.",
-      points: [
-        "Freeing up founder/CEO bandwidth → Founders often shoulder product leadership longer than they should. I take ownership so they can focus on fundraising, partnerships, or market expansion, while knowing AI adoption and monetisation are handled with discipline.",
-        "Developing leaders → I mentor rising product managers and heads, giving them the skills and confidence to lead independently and integrate AI into their team's roadmaps.",
-        "Driving Innovation → Beyond stability, I bring a builder's mindset. Having filed 13 patents in AI and automation, I know how to take raw ideas and shape them into scalable, defensible products that generate lasting business value.",
-        "AI-first product functions → I set up product organisations that are equipped with the latest AI tools and techniques — from experimentation platforms to automation workflows — so your teams deliver faster, smarter, and with greater impact.",
-        "AI-first & monetisation strategies → I help turn innovation into revenue by shaping pricing, packaging, and AI-enabled features and data products that customers value and pay for.",
-        "High-stakes initiatives → For critical launches, market entries, or enterprise pilots, I step in with focused ownership. My role is to deliver outcomes quickly while keeping core teams on track with their existing priorities."
+      scenarios: [
+        {
+          title: "Freeing Up Founder/CEO Bandwidth",
+          situation: "Founders often shoulder product leadership longer than they should.",
+          action: "I take ownership so they can focus on fundraising, partnerships, or market expansion, while knowing AI adoption and monetisation are handled with discipline.",
+          icon: "🚀"
+        },
+        {
+          title: "Developing Leaders",
+          situation: "Rising product managers need skills and confidence to lead independently.",
+          action: "I mentor rising product managers and heads, giving them the skills and confidence to lead independently and integrate AI into their team's roadmaps.",
+          icon: "👥"
+        },
+        {
+          title: "Driving Innovation",
+          situation: "Need to transform raw ideas into scalable products.",
+          action: "Beyond stability, I bring a builder's mindset. Having filed <strong className='text-gold-highlight'>13 patents</strong> in AI and automation, I know how to take raw ideas and shape them into scalable, defensible products that generate lasting business value.",
+          icon: "💡"
+        },
+        {
+          title: "AI-First Product Functions",
+          situation: "Teams need modern AI tools and techniques to stay competitive.",
+          action: "I set up product organisations that are equipped with the latest AI tools and techniques — from experimentation platforms to automation workflows — so your teams deliver faster, smarter, and with greater impact.",
+          icon: "🤖"
+        },
+        {
+          title: "AI-First Monetisation Strategies",
+          situation: "Innovation needs to translate into revenue streams.",
+          action: "I help turn innovation into revenue by shaping pricing, packaging, and AI-enabled features and data products that customers value and pay for.",
+          icon: "💰"
+        },
+        {
+          title: "High-Stakes Initiatives",
+          situation: "Critical launches, market entries, or enterprise pilots need focused ownership.",
+          action: "For critical launches, market entries, or enterprise pilots, I step in with focused ownership. My role is to deliver outcomes quickly while keeping core teams on track with their existing priorities.",
+          icon: "🎯"
+        }
       ]
     }
   ];
@@ -323,11 +388,35 @@ const EmbeddedCPOPage = () => {
                     {phase.description}
                   </p>
                   
-                  <div className="space-y-4">
-                    {phase.points.map((point, pointIndex) => (
-                      <div key={pointIndex} className="bg-white p-6 rounded-xl shadow-lg">
-                        <p className="text-cool-gray leading-relaxed">
-                          {point}
+                  <div className="space-y-6">
+                    {phase.scenarios.map((scenario, pointIndex) => (
+                      <div key={pointIndex} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div className="flex items-start space-x-4">
+                          <div className="text-3xl flex-shrink-0">
+                            {scenario.icon}
+                          </div>
+                          <div className="flex-1">
+                            <h4 className="text-lg font-bold text-deep-charcoal mb-3 font-inter">
+                              {scenario.title}
+                            </h4>
+                            <div className="mb-4">
+                              <div className="text-sm font-semibold text-cool-gray mb-2 uppercase tracking-wide">
+                                Situation:
+                              </div>
+                              <p className="text-cool-gray leading-relaxed">
+                                {scenario.situation}
+                              </p>
+                            </div>
+                            <div>
+                              <div className="text-sm font-semibold text-tech-green mb-2 uppercase tracking-wide">
+                                My Action:
+                              </div>
+                              <p className="text-deep-charcoal leading-relaxed font-medium">
+                                <span dangerouslySetInnerHTML={{ __html: scenario.action }} />
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                         </p>
                       </div>
                     ))}
